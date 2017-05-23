@@ -3,7 +3,7 @@
     /*
     Plugin Name: overzicht sloten plugin
     Version: 1.0
-    Author: Erwin van Tilburg
+    Author: Mitchell van der Woude
     Author URI: https://github.com/Mitchfire1997
     Description: Dit wordt form met overzicht van de sloten
     Text Domain: Test.nl
@@ -14,22 +14,22 @@
         ?>
 <?php
        
-       
+         
    date_default_timezone_set("Europe/Amsterdam");
         global $wpdb;  
         
          session_start();
-   define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', '');
-   define('DB_DATABASE', 'conferentie');
+   define('DB_SERVER', 'mysql.hostinger.nl');
+   define('DB_USERNAME', 'u912813865_dudyt');
+   define('DB_PASSWORD', 'implementatie');
+   define('DB_DATABASE', 'u912813865_vyrej');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     
        
        
        
 ?>
-            <style>
+        <style>
                 #content tr td:last-child{
                         border: 1px solid #000000;
                     }
@@ -39,6 +39,9 @@
                         padding: 6px 24px;
                     }
         </style>
+        <div id="AgendaBeschrijving">
+            Welkom op bij de agenda van de conferentie over Games.
+        </div>
         <div id="AgendaForm">
          <table>
                         <tr>
@@ -66,10 +69,10 @@
                                     
                                         
                                        <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                        $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -78,7 +81,11 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 1";
+                                        //$sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 1";
+                                            $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 1 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -96,10 +103,10 @@
                                  
                                         
                                           <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                        $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -108,7 +115,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 6";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 6 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -126,10 +136,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -138,7 +148,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 11";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 11 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -156,10 +169,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -168,7 +181,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 16";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 16 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -191,10 +207,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -203,7 +219,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 2";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 2 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -221,10 +240,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -233,7 +252,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 7";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 7 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -251,10 +273,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -263,7 +285,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 12";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 12 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -281,10 +306,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -293,7 +318,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 17";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 17 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -316,10 +344,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -328,7 +356,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 3";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 3 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -346,10 +377,10 @@
                              
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -358,7 +389,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 8";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 8 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -376,10 +410,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -388,7 +422,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 13";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 13 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -406,10 +443,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -418,7 +455,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 18";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 18 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -441,10 +481,10 @@
                              
                                         
                                  <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -453,7 +493,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 4";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 4 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -471,10 +514,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -483,7 +526,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 9";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 9 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -501,10 +547,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -513,7 +559,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 14";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 14 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -531,10 +580,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -543,7 +592,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 19";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 19 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -566,10 +618,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -578,7 +630,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 5";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 5 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -596,10 +651,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -608,7 +663,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 10";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 10 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -626,10 +684,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -638,7 +696,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 15";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 15 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -656,10 +717,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -668,7 +729,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 20";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 20 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -712,10 +776,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -724,7 +788,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 21";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 21 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -742,10 +809,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -754,7 +821,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 30";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 30 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -772,10 +842,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -784,7 +854,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 39";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 39 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -802,10 +875,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -814,7 +887,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 48";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 48 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -837,10 +913,10 @@
                                  
                                         
                                  <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -849,7 +925,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 22";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 22 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -867,10 +946,10 @@
                                  
                                         
                               <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -879,7 +958,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 31";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 31 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -897,10 +979,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -909,7 +991,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 40";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 40 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -927,10 +1012,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -939,7 +1024,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 49";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 49 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -962,10 +1050,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -974,7 +1062,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 23";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 23 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -992,10 +1083,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1004,7 +1095,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 32";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 32 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1022,10 +1116,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1034,7 +1128,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 41";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 41 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1052,10 +1149,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1064,7 +1161,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 50";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 50 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1087,10 +1187,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1099,7 +1199,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 24";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 24 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1116,10 +1219,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1128,37 +1231,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 33";
-                                        $result = $conn->query($sql);
-
-                                        if ($result->num_rows > 0) {
-                                            // output data of each row
-                                            while($row = $result->fetch_assoc()) {
-                                               echo "Naam Spreker: " . $row["naam"]. "<br>  Onderwerp: " . $row["onderwerp"]. "<br> " . $row["omschrijving"]. "<br>";
-                                            }
-                                        } else {
-                                            echo "";
-                                        }
-                                        $conn->close();
-                                        ?>
-                            </td>
-                             <td>
-                                 
-                                        
-                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
-
-                                        // Create connection
-                                        $conn = new mysqli($servername, $username, $password, $dbname);
-                                        // Check connection
-                                        if ($conn->connect_error) {
-                                            die("Connection failed: " . $conn->connect_error);
-                                        } 
-
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 42";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 33 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1176,10 +1252,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1188,7 +1264,43 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 51";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 42 AND tag = 3";
+                                        $result = $conn->query($sql);
+
+                                        if ($result->num_rows > 0) {
+                                            // output data of each row
+                                            while($row = $result->fetch_assoc()) {
+                                               echo "Naam Spreker: " . $row["naam"]. "<br>  Onderwerp: " . $row["onderwerp"]. "<br> " . $row["omschrijving"]. "<br>";
+                                            }
+                                        } else {
+                                            echo "";
+                                        }
+                                        $conn->close();
+                                        ?>
+                            </td>
+                             <td>
+                                 
+                                        
+                                   <?php
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
+
+                                        // Create connection
+                                        $conn = new mysqli($servername, $username, $password, $dbname);
+                                        // Check connection
+                                        if ($conn->connect_error) {
+                                            die("Connection failed: " . $conn->connect_error);
+                                        } 
+
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 51 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1211,10 +1323,10 @@
                                  
                                         
                                  <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1223,7 +1335,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 25";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 25 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1241,10 +1356,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1253,7 +1368,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 34";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 34 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1271,10 +1389,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1283,7 +1401,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 43";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 43 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1301,10 +1422,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1313,7 +1434,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 52";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 52 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1336,10 +1460,10 @@
                                
                                       
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1348,7 +1472,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 26";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 26 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1366,10 +1493,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1378,7 +1505,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 35";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 35 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1396,10 +1526,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1408,7 +1538,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 44";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 44 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1426,10 +1559,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1438,7 +1571,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 53";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 53 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1461,10 +1597,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1473,7 +1609,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 27";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 27 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1491,10 +1630,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1503,7 +1642,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 36";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 36 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1521,10 +1663,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1533,7 +1675,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 45";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 45 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1551,10 +1696,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1563,7 +1708,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 54";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 54 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1586,10 +1734,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1598,7 +1746,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 28";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 28 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1616,10 +1767,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1628,7 +1779,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 37";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 37 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1646,10 +1800,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1658,7 +1812,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 46";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 46 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1676,10 +1833,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1688,7 +1845,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 55";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 55 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1711,10 +1871,10 @@
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1723,7 +1883,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 29";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 29 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1741,10 +1904,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1753,7 +1916,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 38";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 38 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1771,10 +1937,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1783,7 +1949,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 47";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 47 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1801,10 +1970,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1813,7 +1982,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 56";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 56 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1855,10 +2027,10 @@
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1867,7 +2039,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 57";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 57 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1885,10 +2060,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1897,7 +2072,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 61";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 61 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1915,10 +2093,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1927,7 +2105,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 65";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 65 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1945,10 +2126,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1957,7 +2138,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 69";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 69 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -1980,10 +2164,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1992,7 +2176,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 58";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 58 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2010,10 +2197,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2022,7 +2209,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 62";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 62 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2040,10 +2230,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2052,7 +2242,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 66";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 66 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2070,10 +2263,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2082,7 +2275,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 70";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 70 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2105,10 +2301,10 @@
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2117,7 +2313,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 59";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 59 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2135,10 +2334,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2147,7 +2346,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 63";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 63 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2165,10 +2367,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2177,7 +2379,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 67";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 67 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2195,10 +2400,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2207,7 +2412,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 71";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 71 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2230,10 +2438,10 @@
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2242,7 +2450,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 60";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 60 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2260,10 +2471,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2272,7 +2483,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 64";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 64 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2290,10 +2504,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2302,7 +2516,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 68";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 68 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2320,10 +2537,10 @@
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2332,7 +2549,10 @@
                                             die("Connection failed: " . $conn->connect_error);
                                         } 
 
-                                        $sql = "SELECT naam, onderwerp, omschrijving FROM login where 1e_slot = 72";
+                                        $sql = "SELECT login.naam, login.onderwerp, login.omschrijving
+                                                    FROM login
+                                                    INNER JOIN slot
+                                                    ON login.1e_slot=slot.id where 1e_slot = 72 AND tag = 3";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
@@ -2349,8 +2569,12 @@
                     </tr>
                     </form>
                     </table>
-                <a href="http://localhost/conferentiesite/wordpress/aanvraag/">
+        
+                <a href="http://implementatiekt3.hole.es/aanvraag/">
     <button>Aanvragen</button>
+</a>
+<a href="http://implementatiekt3.hole.es/aantallen/">
+    <button>Ticket aantallen</button>
 </a>
        </div>
 <?php

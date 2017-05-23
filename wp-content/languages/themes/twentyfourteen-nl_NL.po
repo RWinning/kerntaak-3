@@ -77,13 +77,13 @@ msgstr "Galerijen"
 msgid "More links"
 msgstr "Meer links"
 
-#: inc/widgets.php:91 taxonomy-post_format.php:45
-msgid "Links"
-msgstr "Links"
-
 #: inc/widgets.php:88
 msgid "More quotes"
 msgstr "Meer uitspraken"
+
+#: inc/widgets.php:91 taxonomy-post_format.php:45
+msgid "Links"
+msgstr "Links"
 
 #: inc/widgets.php:87 taxonomy-post_format.php:42
 msgid "Quotes"
@@ -205,13 +205,13 @@ msgstr "Gebruik een <a href=\"%1$s\">tag</a> om berichten uit te lichten.Wanneer
 msgid "Featured Content"
 msgstr "Uitgelichte inhoud"
 
-#: inc/customizer.php:47 inc/customizer.php:48
-msgid "Background may only be visible on wide screens."
-msgstr "Achtergrond wordt wellicht alleen getoond bij brede schermen."
-
 #: inc/customizer.php:44 inc/customizer.php:45
 msgid "May only be visible on wide screens."
 msgstr "Is wellicht alleen zichtbaar op brede schermen."
+
+#: inc/customizer.php:47 inc/customizer.php:48
+msgid "Background may only be visible on wide screens."
+msgstr "Achtergrond wordt wellicht alleen getoond bij brede schermen."
 
 #: inc/customizer.php:40
 msgid "Display Site Title &amp; Tagline"

@@ -3,8 +3,8 @@
     /*
     Plugin Name: form plugin
     Version: 1.0
-    Author: Erwin van Tilburg
-    Author URI: https://github.com/RWinning
+    Author: Mitchell van der Woude
+    Author URI: https://github.com/Mitchfire1997
     Description: Dit wordt een form
     Text Domain: Test.nl
     */
@@ -46,7 +46,7 @@
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['naam'] = $_POST['achternaam'];
             
-               header("location: reserveren");
+               header("location: ticket");
         
             
         }
@@ -54,7 +54,7 @@
           
        $output = " 
                     <table>
-                    <form action='http://localhost/conferentiesite/wordpress/registreren' method='post'>
+                    <form action='http://implementatiekt3.hole.es/registreren_bezoeker' method='post'>
                     <tr>
                         <td>Voornaam:</td><td><input type='text' name='voornaam' required/></td>
                     </tr>

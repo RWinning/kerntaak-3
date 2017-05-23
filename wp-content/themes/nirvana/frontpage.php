@@ -23,82 +23,43 @@ foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
 ?>
 
 <div id="frontpage">
+<?php
+// When a post query has been selected from the Slider type in the admin area
+     global $post;
+     // Initiating query
+     $custom_query = new WP_query();
+     $slides = array();
 
-	<?php nirvana_ppslider(); ?>
+	 if($nirvana_slideNumber>0):
 
-	<div id="pp-afterslider" class="entry-content">
-	<?php
-	// First FrontPage Title
-	if($nirvana_fronttext1 || $nirvana_fronttext3) { ?><div id="pp-texttop"><?php
-	if($nirvana_fronttext1) {?><div id="front-text1" class="ppbox"> <h2><?php echo do_shortcode($nirvana_fronttext1) ?> </h2></div><?php }
-	if($nirvana_fronttext3) {?><div id="front-text3" class="ppbox"> <?php echo do_shortcode($nirvana_fronttext3) ?></div><?php }
-	?></div><?php }
+     // Switch for Query type
+     switch ($nirvana_slideType) {
+          case 'Latest Posts' :
+               $custom_query->query('showposts='.$nirvana_slideNumber.'&ignore_sticky_posts=1');
+          break;
+          case 'Random Posts' :
+               $custom_query->query('showposts='.$nirvana_slideNumber.'&orderby=rand&ignore_sticky_posts=1');
+          break;
+          case 'Latest Posts from Category' :
+               $custom_query->query('showposts='.$nirvana_slideNumber.'&category_name='.$nirvana_slideCateg.'&ignore_sticky_posts=1');
+          break;
+          case 'Random Posts from Category' :
+               $custom_query->query('showposts='.$nirvana_slideNumber.'&category_name='.$nirvana_slideCateg.'&orderby=rand&ignore_sticky_posts=1');
+          break;
+          case 'Sticky Posts' :
+               $custom_query->query(array('post__in'  => get_option( 'sticky_posts' ), 'showposts' =>$nirvana_slideNumber,'ignore_sticky_posts' => 1));
+          break;
+          case 'Specific Posts' :
+               // Transofm string separated by commas into array
+               $pieces_array = explode(",", $nirvana_slideSpecific);
+               $custom_query->query(array( 'post_type' => 'any', 'showposts' => -1, 'post__in' => $pieces_array, 'ignore_sticky_posts' => 1,'orderby' => 'post__in' ));
+               break;
+          case 'Custom Slides':
 
-	nirvana_ppcolumns();
-
-	if($nirvana_fronttext2 || $nirvana_fronttext4) {?><div id="pp-textmiddle"><?php
-	// Second FrontPage title
-	if($nirvana_fronttext2) {?><div id="front-text2" class="ppbox"> <h2><?php echo do_shortcode($nirvana_fronttext2) ?> </h2></div><?php }
-	// Frontpage second text area
-	if($nirvana_fronttext4) {?><div id="front-text4" class="ppbox"> <?php echo do_shortcode($nirvana_fronttext4) ?> </div><?php }
-	?></div><?php }
-	if ($nirvanas['nirvana_excerpttype']=='Characters') {
-		add_filter( 'get_the_excerpt', 'nirvana_excerpt_length_chars' );
-	} else {
-		remove_filter( 'excerpt_length', 'nirvana_excerpt_length_slider', 999 );
-		remove_filter( 'excerpt_more', 'nirvana_excerpt_more_slider', 999 );
-		add_filter( 'excerpt_length', 'nirvana_excerpt_length_words' );
-		add_filter( 'get_the_excerpt', 'nirvana_custom_excerpt_more',10 );
-	}
-	if ($nirvana_frontposts=="Enable"): get_template_part('content/content', 'frontpage'); endif; ?>
-
-	<?php
-	// Third FrontPage Title/Text
-	if($nirvana_fronttext5 || $nirvana_fronttext6) { ?><div id="pp-textbottom"><?php
-	if($nirvana_fronttext5) {?><div id="front-text5" class="ppbox"> <h2><?php echo do_shortcode($nirvana_fronttext5) ?> </h2></div><?php }
-	if($nirvana_fronttext6) {?><div id="front-text6" class="ppbox"> <?php echo do_shortcode($nirvana_fronttext6) ?></div><?php }
-	?></div><?php } ?>
-
-	</div> <!-- #pp-afterslider -->
-	</div> <!-- #frontpage -->
-
-
-<?php function nirvana_ppslider() {
-	$nirvanas= nirvana_get_theme_options();
-	foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
-    $custom_query = new WP_query();
-    $slides = array();
-
-	if($nirvana_slideNumber>0):
-
-	// Switch for Query type
-	switch ($nirvana_slideType) {
-	  case 'Latest Posts' :
-	       $custom_query->query('showposts='.$nirvana_slideNumber.'&ignore_sticky_posts=1');
-	  break;
-	  case 'Random Posts' :
-	       $custom_query->query('showposts='.$nirvana_slideNumber.'&orderby=rand&ignore_sticky_posts=1');
-	  break;
-	  case 'Latest Posts from Category' :
-	       $custom_query->query('showposts='.$nirvana_slideNumber.'&category_name='.$nirvana_slideCateg.'&ignore_sticky_posts=1');
-	  break;
-	  case 'Random Posts from Category' :
-	       $custom_query->query('showposts='.$nirvana_slideNumber.'&category_name='.$nirvana_slideCateg.'&orderby=rand&ignore_sticky_posts=1');
-	  break;
-	  case 'Sticky Posts' :
-	       $custom_query->query(array('post__in'  => get_option( 'sticky_posts' ), 'showposts' =>$nirvana_slideNumber,'ignore_sticky_posts' => 1));
-	  break;
-	  case 'Specific Posts' :
-	       // Transofm string separated by commas into array
-	       $pieces_array = explode(",", $nirvana_slideSpecific);
-	       $custom_query->query(array( 'post_type' => 'any', 'showposts' => -1, 'post__in' => $pieces_array, 'ignore_sticky_posts' => 1,'orderby' => 'post__in' ));
-	       break;
-	  case 'Custom Slides':
-
-	       break;
-	  case 'Disabled':
-		   break;
-	}//switch
+               break;
+		  case 'Disabled':
+			   break;
+     }//switch
 
 	endif; // slidenumber>0
 	if ($nirvanas['nirvana_excerpttype']=='Characters') {
@@ -130,7 +91,7 @@ foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
 			   if($nirvana_slideNumber>0):
                if ( $custom_query->have_posts() ) while ($custom_query->have_posts()) :
                     $custom_query->the_post();
-                         $img = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ),'slider');
+                         $img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'slider');
                 	$slide['image'] = $img[0];
                 	$slide['link'] = get_permalink();
                 	$slide['title'] = get_the_title();
@@ -140,6 +101,7 @@ foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
 			   endif; // slidenumber>0
                break;
      }; // switch
+
 
 if (count($slides)>0):
      ?>
@@ -165,13 +127,18 @@ if (count($slides)>0):
 
 	<?php endforeach; ?>
      </div>
-<?php endif;
-} // nirvana_ppslider()
+<?php endif; ?>
 
 
-function nirvana_ppcolumns() {
-	$nirvanas= nirvana_get_theme_options();
-	foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
+<div id="pp-afterslider" class="entry-content">
+<?php
+// First FrontPage Title
+if($nirvana_fronttext1 || $nirvana_fronttext3) { ?><div id="pp-texttop"><?php
+if($nirvana_fronttext1) {?><div id="front-text1" class="ppbox"> <h2><?php echo do_shortcode($nirvana_fronttext1) ?> </h2></div><?php }
+if($nirvana_fronttext3) {?><div id="front-text3" class="ppbox"> <?php echo do_shortcode($nirvana_fronttext3) ?></div><?php }
+?></div><?php }
+//COLUMNS
+     // Initiating query
      $custom_query2 = new WP_query();
      $columns= array();
 
@@ -232,7 +199,7 @@ function nirvana_ppcolumns() {
                if ( $custom_query2->have_posts() )
 					while ($custom_query2->have_posts()) :
 						$custom_query2->the_post();
-                        $img = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ),'columns');
+                        $img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'columns');
 						$column['image'] = $img[0];
 						$column['link'] = get_permalink();
 						$column['text'] = get_the_excerpt();
@@ -244,7 +211,7 @@ function nirvana_ppcolumns() {
                break;
      }; // switch
 
-} // nirvana_ppcolumns()
+
 
 function nirvana_columns($columns,$nr_columns){
 	$counter=0;
@@ -272,8 +239,33 @@ function nirvana_columns($columns,$nr_columns){
 		endif;
 	endforeach; ?>
 </div> </div><?php
-} // nirvana_columns()
+} // nirvana_columns_output()
 
 // nirvana_singlecolumn_output() moved to includes/widget.php and made pluggable
 
-// End of nirvana_frontpage_generator
+if($nirvana_fronttext2 || $nirvana_fronttext4) {?><div id="pp-textmiddle"><?php
+// Second FrontPage title
+if($nirvana_fronttext2) {?><div id="front-text2" class="ppbox"> <h2><?php echo do_shortcode($nirvana_fronttext2) ?> </h2></div><?php }
+// Frontpage second text area
+if($nirvana_fronttext4) {?><div id="front-text4" class="ppbox"> <?php echo do_shortcode($nirvana_fronttext4) ?> </div><?php }
+?></div><?php }
+if ($nirvanas['nirvana_excerpttype']=='Characters') {
+	add_filter( 'get_the_excerpt', 'nirvana_excerpt_length_chars' );
+} else {
+	remove_filter( 'excerpt_length', 'nirvana_excerpt_length_slider', 999 );
+	remove_filter( 'excerpt_more', 'nirvana_excerpt_more_slider', 999 );
+	add_filter( 'excerpt_length', 'nirvana_excerpt_length_words' );
+	add_filter( 'get_the_excerpt', 'nirvana_custom_excerpt_more',10 );
+}
+if ($nirvana_frontposts=="Enable"): get_template_part('content/content', 'frontpage'); endif; ?>
+
+<?php
+// Third FrontPage Title/Text
+if($nirvana_fronttext5 || $nirvana_fronttext6) { ?><div id="pp-textbottom"><?php
+if($nirvana_fronttext5) {?><div id="front-text5" class="ppbox"> <h2><?php echo do_shortcode($nirvana_fronttext5) ?> </h2></div><?php }
+if($nirvana_fronttext6) {?><div id="front-text6" class="ppbox"> <?php echo do_shortcode($nirvana_fronttext6) ?></div><?php }
+?></div><?php } ?>
+
+</div> <!-- #pp-afterslider -->
+</div> <!-- #frontpage -->
+<?php // End of nirvana_frontpage_generator

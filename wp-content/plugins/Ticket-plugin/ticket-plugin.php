@@ -3,8 +3,8 @@
     /*
     Plugin Name: ticket plugin
     Version: 1.0
-    Author: Erwin van Tilburg
-    Author URI: https://github.com/RWinning
+    Author: Mitchell van der Woude
+    Author URI: https://github.com/Mitchfire1997
     Description: Dit wordt een ticket form
     Text Domain: Test.nl
     */
@@ -52,7 +52,7 @@
                 $("#button1").click(function(){
                     if (maxAppend >= 250) return;
                     var newTicket = 
-                    '<tr>                                                                                                                                                                                                                       <td>Type: <select name = "dag[]" class="dag"> <option value = "1" ticket-prijs = "45" > Vrijdag </option> <option value = "2" ticket-prijs = "60"  > Zaterdag </option> <option value = "3" ticket-prijs = "30"> Zondag </option> <option value = "5" ticket-prijs = "80"> Weekend </option><option value = "4" ticket-prijs = "100"> Passe-partout </option> </select>                                                                                                                                           </td> <td><input type="text" name="prijs-ticket[]" class="price" value="45" /> </td>                                                                                                                                                                                                                        <td> Maaltijd: <select name = "maaltijd[]" class="maaltijd"><option value = "1" maaltijd-prijs = "0"> geen </option> <option value = "2" maaltijd-prijs = "20" > Lunch </option> <option value = "3" maaltijd-prijs = "30"> Diner </option> <option value = "4" maaltijd-prijs = "50"> Lunch en Diner </option> <option value = "5" maaltijd-prijs = "17"> Lunch Vegetarisch </option> <option value = "6" maaltijd-prijs = "27"> Diner Vegetarisch </option> <option value = "7" maaltijd-prijs = "45"> Lunch en Diner Vegetarisch </option> </select>               </td>  </td> <td><input type="text" name="prijs-maaltijd[]" class="maaltijd-prijs" value="0" readonly/> </td>                                                                                                                                                                                                                <td> <button class = "delete" type = "button" > Verwijder Ticket </button></td>                                                                                                                                                                                                   </tr><br>';
+                    '<tr>                                                                                                                                                                                                                       <td>Type: <select name = "dag[]" class="dag"> <option value = "1" ticket-prijs = "45" > Vrijdag </option> <option value = "2" ticket-prijs = "60"  > Zaterdag </option> <option value = "3" ticket-prijs = "30"> Zondag </option> <option value = "5" ticket-prijs = "80"> Weekend </option><option value = "4" ticket-prijs = "100"> Passe-partout </option> </select>                                                                                                                                           </td> <td><input type="text" name="prijs-ticket[]" class="price" value="45" /> </td>                                                                                                                                                                                                                        <td> Maaltijd: <select name = "maaltijd[]" class="maaltijd"><option value = "1" maaltijd-prijs = "0"> geen </option> <option value = "2" maaltijd-prijs = "20" > Lunch </option> <option value = "3" maaltijd-prijs = "30"> Diner </option> <option value = "4" maaltijd-prijs = "50"> Lunch en Diner </option> </select>               </td>  </td> <td><input type="text" name="prijs-maaltijd[]" class="maaltijd-prijs" value="0" readonly/> </td>                                                                                                                                                                                                                <td> <button class = "delete" type = "button" > Verwijder Ticket </button></td>                                                                                                                                                                                                   </tr><br>';
                 //$('#newTicket').append(newTicket); 
                      $('.bodyClass').append(newTicket);
                 maxAppend++;
@@ -87,7 +87,7 @@
         </script>
         </head>
         <body>       
-            <form action='http://localhost/conferentiesite/wordpress/reserveren' method='post'>
+            <form action='http://implementatiekt3.hole.es/ticket' method='post'>
                 <table>
                     <tbody class="bodyClass" >
                 <tr>    
@@ -98,7 +98,7 @@
                     <td><input type="text" name="email" value="<?php echo $_SESSION['email']; ?>" placeholder="geef hier je emailadres" readonly/></td><br>
                 </tr>
                 <tr>                                                                                                                                                                                                                      <td>Type: <select name = "dag[]" class="dag"> <option value = "1" ticket-prijs = "45" > Vrijdag </option> <option value = "2" ticket-prijs = "60" > Zaterdag </option> <option value = "3" ticket-prijs = "30"> Zondag </option> <option value = "5" ticket-prijs = "80">Weekend </option><option value = "4" ticket-prijs = "100"> Passe-partout </option> </select>                                                                                                                                </td> 
-               <td><input type="text" name="prijs-ticket[]" class="price" value="45" /> </td>                                                                                                                                                                  <td> Maaltijd: <select name = "maaltijd[]" class="maaltijd"><option value = "1" maaltijd-prijs = "0"> geen </option> <option value = "2" maaltijd-prijs = "20" > Lunch </option> <option value = "3" maaltijd-prijs = "30"> Diner </option> <option value = "4" maaltijd-prijs = "50">                Lunch en Diner </option> <option value = "5" maaltijd-prijs = "18"> Lunch Vegetarisch </option> <option value = "6" maaltijd-prijs = "27"> Diner Vegetarisch </option> <option value = "7" maaltijd-prijs = "45"> Lunch en Diner Vegetarisch </option> </select></td>  </td> <td><input type="text" name="prijs-maaltijd[]" value="0" class="maaltijd-prijs" /> </td><br>       
+               <td><input type="text" name="prijs-ticket[]" class="price" value="45" /> </td>                                                                                                                                                                  <td> Maaltijd: <select name = "maaltijd[]" class="maaltijd"><option value = "1" maaltijd-prijs = "0"> geen </option> <option value = "2" maaltijd-prijs = "20" > Lunch </option> <option value = "3" maaltijd-prijs = "30"> Diner </option> <option value = "4" maaltijd-prijs = "50">                Lunch en Diner </option> </select></td>  </td> <td><input type="text" name="prijs-maaltijd[]" value="0" class="maaltijd-prijs" /> </td><br>       
             </tr>          
                 <tr>
                      <div id='newTicket'></div>
@@ -137,10 +137,7 @@ if(isset($_POST["submit"]))
     $name = $wpdb->get_var("SELECT voornaam, tussenvoegsel, achternaam FROM user where id = $user");
     $tussenvoegsel = $wpdb->get_var("SELECT tussenvoegsel, achternaam FROM user where id = $user");
     $achternaam = $wpdb->get_var("SELECT achternaam FROM user where id = $user");
-    $totaal_prijs = $wpdb->get_var("SELECT prijs_totaal FROM reservering where user = $user");
-    $barcode_ticket = $wpdb->get_var("SELECT streepjescode FROM ticket where id = $user");
-    $barcode_maaltijd = $wpdb->get_var("SELECT streepjescode FROM maaltijd where id = $user");
-    
+    $totalePrijs = $wpdb->get_var("SELECT prijs_totaal FROM reservering where user = $user");
       
     $wpdb->insert( 
     'reservering', 
@@ -186,54 +183,6 @@ if(isset($_POST["submit"]))
     
     }
       ?>
-<!DOCTYPE html>
-<html>
-<body>
-
-<?php 
-        
-
-
-$to  = "$_GET(email)"; 
-
-
-// subject
-$subject = 'Order Tickets Conferentie Games';
-
-// message
-$message = '
-<html>
-<head>
-  <title>Welcome to the conferentie of games.</title>
-</head>
-<body>
- Message for the mail of tickets.   <br>
- ReserveringID: '.$user.' <br>
- Name: '.$name.' '.$tussenvoegsel.' '.$achternaam.' <br>
- Ticket(s):  <br>
- Maalrijd): <br>
- Totale prijs: '.$totaal_prijs.' <br>
- Barcode Ticket:   '.$barcode_ticket.' <br>
- Barcode Maaltijd:    '.$barcode_maaltijd.' <br>
- </body>
-</html>
-';
-
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-// Additional headers
-$headers .= 'To: '.$_SESSION["email"].' <'.$_SESSION["email"].'>' . "\r\n";
-$headers .= 'From: Conferentie <conferentie1234@gmail.com>' . "\r\n";
-
-        mail($to, $subject, $message, $headers);
-        
-       
-?>
-
-</body>
-</html>
 <?php
        $output = "<table>
                     <tr>

@@ -3,8 +3,8 @@ ob_start();
     /*
     Plugin Name: Agenda plugin
     Version: 1.0
-    Author: Erwin van Tilburg
-    Author URI: https://github.com/RWinning
+    Author: Mitchell van der Woude
+    Author URI: https://github.com/Mitchfire1997
     Description: Dit wordt een agenda
     Text Domain: Test.nl
     */
@@ -20,10 +20,10 @@ ob_start();
         global $wpdb;  
         
          session_start();
-   define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', '');
-   define('DB_DATABASE', 'conferentie');
+   define('DB_SERVER', 'mysql.hostinger.nl');
+   define('DB_USERNAME', 'u912813865_dudyt');
+   define('DB_PASSWORD', 'implementatie');
+   define('DB_DATABASE', 'u912813865_vyrej');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     
        
@@ -70,10 +70,10 @@ ob_start();
                                     
                                         
                                        <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                        $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -104,10 +104,10 @@ ob_start();
                                  
                                         
                                           <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                        $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -137,10 +137,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -170,10 +170,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -208,10 +208,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -241,10 +241,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -274,10 +274,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -307,10 +307,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -345,10 +345,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -378,10 +378,10 @@ ob_start();
                              
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -411,10 +411,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -444,10 +444,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -482,10 +482,10 @@ ob_start();
                              
                                         
                                  <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -515,10 +515,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -548,10 +548,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -581,10 +581,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -619,10 +619,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -652,10 +652,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -685,10 +685,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -718,10 +718,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -777,10 +777,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -810,10 +810,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -843,10 +843,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -876,10 +876,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -914,10 +914,10 @@ ob_start();
                                  
                                         
                                  <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -947,10 +947,10 @@ ob_start();
                                  
                                         
                               <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -980,10 +980,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1013,10 +1013,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1051,10 +1051,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1084,10 +1084,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1117,10 +1117,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1150,10 +1150,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1188,10 +1188,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1220,10 +1220,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1253,10 +1253,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1286,10 +1286,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1324,10 +1324,10 @@ ob_start();
                                  
                                         
                                  <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1357,10 +1357,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1390,10 +1390,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1423,10 +1423,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1461,10 +1461,10 @@ ob_start();
                                
                                       
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1494,10 +1494,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1527,10 +1527,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1560,10 +1560,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1598,10 +1598,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1631,10 +1631,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1664,10 +1664,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1697,10 +1697,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1735,10 +1735,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1768,10 +1768,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1801,10 +1801,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1834,10 +1834,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1872,10 +1872,10 @@ ob_start();
                                 
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1905,10 +1905,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1938,10 +1938,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -1971,10 +1971,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2028,10 +2028,10 @@ ob_start();
                                  
                                         
                                   <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2061,10 +2061,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2094,10 +2094,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2127,10 +2127,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2165,10 +2165,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2198,10 +2198,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2231,10 +2231,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2264,10 +2264,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2302,10 +2302,10 @@ ob_start();
                                  
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2335,10 +2335,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2368,10 +2368,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2401,10 +2401,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2439,10 +2439,10 @@ ob_start();
                                 
                                         
                                    <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2472,10 +2472,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2505,10 +2505,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -2538,10 +2538,10 @@ ob_start();
                                  
                                         
                                     <?php
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "conferentie";
+                                        $servername = "mysql.hostinger.nl";
+                                       $username = "u912813865_dudyt";
+                                        $password = "implementatie";
+                                       $dbname = "u912813865_vyrej";
 
                                         // Create connection
                                         $conn = new mysqli($servername, $username, $password, $dbname);

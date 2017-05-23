@@ -5,13 +5,13 @@ Copyright 2014-16 Cryout Creations
 Author: Cryout Creations
 Requires at least: 4.0
 Tested up to: 4.6
-Stable tag: 1.2.7
+Stable tag: 1.2.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Donate link: https://www.cryoutcreations.eu/donate/
 
 Imagine a land of infinite beauty and overwhelming magnificence. Imagine seas of freedom and oceans of peace joining together with splashing waves of pure love.
-Imagine high mountains of hope, hills of reason and deep valleys of knowledge ï¿½ all covered with dense forests of complete calm. In this mystic land, under a spotless sky of clarity and a bright, cleansing sun you will find Nirvana. The search is finally over; you can now rest, relax and take a deep breath.
+Imagine high mountains of hope, hills of reason and deep valleys of knowledge – all covered with dense forests of complete calm. In this mystic land, under a spotless sky of clarity and a bright, cleansing sun you will find Nirvana. The search is finally over; you can now rest, relax and take a deep breath.
 
 Nirvana will do the rest with a framework of over 200 settings in a user-friendly interface, a very effective responsive design, easy to use typography equipped with Google fonts, all post formats, 8 page templates (magazine and blog layouts included), 12 widget areas and a presentation page complete with an editable slider and columns.
 
@@ -37,12 +37,12 @@ along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 
 Nirvana WordPress Theme bundles the following third-party resources:
 
-Nivo Slider, Copyright 2010 Gilbert Pellegrom
-Nivo Slider is licensed under the terms of the MIT license
+Nivo Slider, Copyright 2010 Gilbert Pellegrom 
+Nivo Slider is licensed under the terms of the MIT license 
 Source: http://dev7studios.com/nivo-slider
 
 FitVids, Copyright 2011 Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
-FitVids is licensed under the terms of the WTFPLlicense
+FitVids is licensed under the terms of the WTFPLlicense 
 Source: http://fitvidsjs.com/
 
 TGM Plugin Activation, Copyright Thomas Griffin
@@ -87,7 +87,7 @@ Source: http://fortawesome.github.io/Font-Awesome/
 
 "Tablet Ipad screen internet browser online" image, Copyright 2013 realworkhard
 "Tablet Ipad screen internet browser online" is licensed under the terms of the Public Domain CC0 License
-Source: http://pixabay.com/en/tablet-ipad-screen-internet-184888/
+Source: http://pixabay.com/en/tablet-ipad-screen-internet-184888/ 
 
 All other images bundled with the theme (used in the demo presentation page and admin section, as well as the social icons) are created by Cryout Creations and released with the theme under GPLv3 as well.
 
@@ -96,31 +96,24 @@ All other images bundled with the theme (used in the demo presentation page and 
 
 Chinese - jimbay
 Croatian - Davor
-Czech - Michal Jurï¿½nek
+Czech - Michal Juránek
 Dutch - John Mulder
-French - skiitrix
-German - ralflexis
+French - skiitrix 
+German - ralflexis 
 Hebrew - Udi Burg
-Hungarian - Tamï¿½s
+Hungarian - Tamás
 Italian - Andrew
 Japanese - Yuka Kachi
 Polish - Marcin Szafran
 Russian - Alexander
-Spanish - Javier Iglesia
-Swedish - Bandit
-Turkish - Arvanitis
+Spanish - Javier Iglesia 
+Swedish - Bandit 
+Turkish - Arvanitis 
 
 
 == Changelog ==
 
-= 1.2.7 =
-* Fixed RTL stylesheet missing in child themes
-* Converted presentation page code to function blocks
-* Updated TGM-PA
-* Fixed columns caption on certain versions of Safari
-* Cleaned up compatibility CSS for old browsers and '!important' usage
-
-= 1.2.6 =
+= 1.2.6 = 
 * Added support for presentation page columns without images (at least one of image, title or text needs to be set)
 * Moved Magazine Layout option under Layout section for better consistency
 * Changed 'More Posts' button label from theme text to configurable option in the settings page (and included in wpml-config.xml list of strings)
@@ -155,7 +148,7 @@ Turkish - Arvanitis
 = 1.2.3 =
 * Added theme version to style and script enqueues to correct some caching issues
 * Fixed menu center align issues with multi-line menus
-* Changed social icon links to no longer be nofollow
+* Changed social icon links to no longer be nofollow 
 * Clarified presentation page usage notice when static page is set
 * Fixed WordPress 4.4.1 issue with plugin/theme notifications being moved in the Layout settings section
 * Fixed missing sticky post styling on Blog page template
@@ -163,15 +156,15 @@ Turkish - Arvanitis
 * Cleaned up !important usage in responsive styling (to ease customizations)
 * Fixed header site title to not use H1 tag when homepage is static
 
-= 1.2.2 =
+= 1.2.2 = 
 * Fixed typos in TGM inclusion causing code collisions with other extensions also using TGM
 * Fixed main menu centered option interfering with the mobile menu
 * Added Swedish translation
 
-= 1.2.1 =
+= 1.2.1 = 
 * Fixed typo loading the wrong textdomain causing translations to stop working
 
-= 1.2 =
+= 1.2 = 
 * REMOVED THE THEME SETTINGS AND ADDED SUPPORT FOR THE SEPARATE THEME SETTINGS PLUGIN
 * Integrated TGM to recommend the theme settings plugin
 * Fixed settings page to handle changed H3 to H2 headings in Wordpress 4.4 RC1
@@ -212,8 +205,8 @@ Turkish - Arvanitis
 * Fixed ternary operator usage for PHP <5.3 (introduced in 1.1)
 * Fixed centre main menu alignment functionality for multi-line menus
 * Added Polish translation
-
-= 1.1 =
+ 
+= 1.1 = 
 * Preliminary WPML / Polylang support for custom theme options - presentation page content and socials (currently only tested on Polylang)
 * Merged WooCommerce compatibility code and styling
 * Fixed presentation page columns content layout on IE9
@@ -230,7 +223,7 @@ Turkish - Arvanitis
 * Fixed a:active colour setup making some text vanish on click
 * Fixed an undefined variable notice on the frontpage
 
-= 1.0.6 =
+= 1.0.6 = 
 * Added centred text option for the presentation page slider captions
 * One itsy bitsy Google fonts fix (yet again)
 * Moved JavaScript scripts from wp_head to wp_footer hook to remove blocking scripts
@@ -249,25 +242,25 @@ Turkish - Arvanitis
 * Fixes RTL styling issue causing horizontal scrollbar
 * Added Italian translation
 
-= 1.0.5 =
+= 1.0.5 = 
 * Fixed layout/image border option non-clickable on IE 11
 * Fixed header container responsiveness
 * Improved active links styling so it's easier replaceable via custom CSS
 * Fixed wrong textdomain occurrence (thanks to Szemcse)
-* Replaced the Presentation Pageï¿½s "Nothing Found" message when there are no published posts with an explanatory placeholder message
+* Replaced the Presentation Page’s "Nothing Found" message when there are no published posts with an explanatory placeholder message
 * Fixed disappearing/too small images inside tables issue on Chrome
 * Removed baseline vertical alignment from styling reset to correct some weird alignment layouts
 * Added Spanish translation
 * Improved two somewhat untranslatable strings (that used esc_attr__() )
 * Fixed an untranslatable string (thanks to seemannKP)
 
-= 1.0.4 =
+= 1.0.4 = 
 * Fixed settings page subsections not opening in some cases
 * Updated Hungarian translation
 * Added Japanese translation
 * Added Turkish translation
 
-= 1.0.3 =
+= 1.0.3 = 
 * Added our social links to the settings page
 * Added search bars to the remaining (main and footer) menus
 * Fixed typos in the Google fonts cleanup function calls
@@ -281,7 +274,7 @@ Turkish - Arvanitis
 * Added RECOMMENDED add_theme_support( "title-tag" )
 * Added some missing commas in styles.css (pointed out by Bill)
 
-= 1.0.1 =
+= 1.0.1 = 
 * Fixed skew missing on photo frame columns
 * Fixed wrong order of tags on widget titles (pointed out by Michael)
 * Replaced alt tag with title in thumbnail anchor function
@@ -298,14 +291,14 @@ Turkish - Arvanitis
 * Fixed 2 typos in settings page
 * Revamped script/styles injection detection to protect the theme's settings page from getting broken by badly written plugins
 
-= 1.0.0 =
+= 1.0.0 = 
 * Added colour scheme support and 12 preset colour schemes
 * Added new options for the slider: Title font size / Text font size (uppercase settings as well)
-* Added new option ï¿½ Slider Excerpt size
-* Added new option ï¿½ Posts per row for the presentation page posts
-* Added new Option ï¿½ Remove hover effect on columns
-* Moved ï¿½Content Marginsï¿½ setting field from Graphics Settings to Layout Settings
-* Fixed Content Margins ï¿½ Padding setting not working
+* Added new option – Slider Excerpt size
+* Added new option – Posts per row for the presentation page posts
+* Added new Option – Remove hover effect on columns
+* Moved ‘Content Margins’ setting field from Graphics Settings to Layout Settings
+* Fixed Content Margins – Padding setting not working
 * Fixed header widget responsiveness when no header image is used
 * Fixed header wp_title() call (left the site title-less)
 * Fixed hardcoded breadcrumbs background colour
@@ -314,64 +307,64 @@ Turkish - Arvanitis
 * Removed topbar shadow (a leftover from early development)
 * Updated translation files
 
-= 0.9.9.11 =
+= 0.9.9.11 = 
 * Fixed Google fonts merging issue when subsets are used (introduced in 0.9.9.10)
-* (Absolutely positively definitely) fixed Ajax "Load More" posts button (againï¿½ one more time)
+* (Absolutely positively definitely) fixed Ajax "Load More" posts button (again… one more time)
 
-= 0.9.9.10 =
+= 0.9.9.10 = 
 * Fixed "array to string conversion" notices
 * Fixed presentation page's 'More Posts' button affecting blog pages
 * Made all CSS minify-able (should now support all caching plugins that perform resource minification)
 * Fixed missing widget Google font support
 * (Properly) optimized Google font calls
 
-= 0.9.9.9 =
-* Fixed slider ï¿½read moreï¿½ button going full width on mobiles
+= 0.9.9.9 = 
+* Fixed slider ‘read more’ button going full width on mobiles
 * Fixed Ajax load more button breaking media gallery pagination functionality
-* Fixed comment bubble appear to be link when in fact it isnï¿½t
-* Fixed a weird save issue affecting only some servers caused by an apostrophe in the sample in custom footer text
+* Fixed comment bubble appear to be link when in fact it isn’t
+* Fixed a weird save issue affecting only some servers caused by an apostrophe in the sample in custom footer text 
 * Implemented escape output in custom_styles (per WordPress request)
 * Fixed #forbottom override on presentation page (for boxed layout and responsiveness disabled)
 * Made JS minify-able (should now support all caching plugins that perform resource minification)
 * Slider excerpt is not limited to half the configurable post excerpt word count
 * Corrected title tag code to adhere to latest WordPress rules
 
-= 0.9.9 =
+= 0.9.9 = 
 * Added customizer callback sanitization
 * Edited theme settings news (now include only title and date)
 * Updated PayPal donate button code
 * Added header widget size option
 * Corrected theme settings sanitization failsafe
-
-= 0.9.8 =
+ 
+= 0.9.8 = 
 * Fixed header responsiveness for the boxed layout
 * Fixed Presentation Page incompatibility with some plugins
 * Fixed settings page compatibility issues
 * Fixed 'Load more' button on the Presentation Page
 * Fixed show/hide setting for the search in topbar
 * Added layout and columns text to the style.css description
-
-= 0.9.7 =
+ 
+= 0.9.7 = 
 * Fixed responsiveness disable setting not taking effect
 * Added a new setting: 'Duality' that changes the site's format wide / boxed
 * Fixed 'READ MORE' button disappearing in slider
-* Fixed slider caption text inline background padding for FireFox
+* Fixed slider caption text inline background padding for FireFox 
 * Fixed top menu search icon position and size
-
-= 0.9.6 =
+ 
+= 0.9.6 = 
 * Fixed columns responsiveness on res <800px
 * Added a wp.media check for the media uploader on the settings page
 * Fixed post excerpt number of characters  not taking effect on the Presentation Page (the bug also added another Continue Reading button)
 * Removed 'first click' alert on mobile
 * Added category check for breadcrumbs categories
 * Removed some leftover code from theme-meta.php
-
-= 0.9.5.1 =
+ 
+= 0.9.5.1 = 
 * Fixed styles enqueue order bug created in 0.9.5
-
-= 0.9.5 =
+ 
+= 0.9.5 = 
 * Removed conditional check for 'wp_enqueue_media'
-* Removed all 'wp_register_style' and 'wp_register_script' functions.
+* Removed all 'wp_register_style' and 'wp_register_script' functions. 
 * Enqueued all admin scripts and styles via 'admin_enqueue_scripts'
 * Added a changelog.txt file
 
@@ -384,24 +377,24 @@ Turkish - Arvanitis
 * Fixed sidebar 'dasboard' typo
 
 = 0.9.3 =
-* Edited 'readme.txt' for new and improved copyright declarations
+* Edited 'readme.txt' for new and improved copyright declarations 
 * Removed Bebas Neue font (copyright incompatibility)
 * Removed hardcoded Javascript found in frontpage.php - moved it to custom-styles.php
 * Replaced 'dirname ( __FILE__ )' with 'get_template_directory()'
 
-= 0.9.2 =
+= 0.9.2 = 
 * Fixed header image responsiveness for full width / normal width
 * Fixed header image responsiveness
 * Removed leftovers from defaults.php
 * Added Russian translation
 
-= 0.9.1 =
+= 0.9.1 = 
 * Fixed menu alignment
 * Fixed header image not starting at top:0
 * Fixed topbar height when set to 'fixed'
-* Fixed topbar on mobile res below 480px
+* Fixed topbar on mobile res below 480px 
 * Fixed front columns layout when using custom widgets
 * Fixed Presentation Page columns on mobile using custom widgets (nth-child replaced with nth-of-type)
 
-= 0.9 =
+= 0.9 = 
 * Initial theme release

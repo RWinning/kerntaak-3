@@ -32,18 +32,17 @@ function nirvana_enqueue_styles() {
 		if (strpos($gfont,"&") === false):
 		   // do nothing
 		else:
-			wp_enqueue_style( 'nirvana-googlefont_'.$i, '//fonts.googleapis.com/css?family=' . $gfont );
+			wp_enqueue_style( 'nirvana-googlefont_'.$i, '//fonts.googleapis.com/css?family=' . $gfont );	
 			unset($gfonts[$i]);
-		endif;
+		endif;		
 	endforeach;
-
-	// merged fonts
+	
+	// merged fonts	
 	if ( count($gfonts)>0 ):
 		wp_enqueue_style( 'nirvana-googlefonts', '//fonts.googleapis.com/css?family=' . implode( "|" , array_unique($gfonts) ), array(), null, 'screen' ); // google fonts
 	endif;
 
 	wp_enqueue_style( 'nirvanas', get_stylesheet_uri(), NULL, _CRYOUT_THEME_VERSION ); // main style.css
-	if (is_rtl()) wp_enqueue_style( 'nirvana-rtl', get_template_directory_uri() . '/styles/rtl.css', NULL, _CRYOUT_THEME_VERSION );
 
 }
 
@@ -55,9 +54,9 @@ function nirvana_styles_echo() {
 	foreach ($nirvanas as $key => $value) { ${"$key"} = $value ;}
 
 	echo preg_replace("/[\n\r\t\s]+/"," " ,nirvana_custom_styles())."\n"; // custom-styles.php
-	if ($nirvana_frontpage == "Enable" && is_front_page() && 'posts' == get_option( 'show_on_front' ) ) {
+	if ($nirvana_frontpage == "Enable" && is_front_page() && 'posts' == get_option( 'show_on_front' ) ) { 
 		echo preg_replace("/[\n\r\t\s]+/"," " ,nirvana_presentation_css())."\n";   // PP styles also in custom-styles.php
-	}
+	} 
 	echo preg_replace("/[\n\r\t\s]+/"," " ,nirvana_customcss())."\n"; // user custom CSS
 }
 add_action('wp_head', 'nirvana_styles_echo', 20);
@@ -66,8 +65,8 @@ add_action('wp_head', 'nirvana_styles_echo', 20);
 function nirvana_enqueue_frontpage() {
 	global $nirvanas;
 	foreach ($nirvanas as $key => $value) { ${"$key"} = $value ;}
-	if (($nirvana_frontpage=="Enable") && is_front_page() && 'posts' == get_option( 'show_on_front' )) {
-		wp_enqueue_style( 'nirvana-frontpage', get_template_directory_uri() . '/styles/style-frontpage.css', NULL, _CRYOUT_THEME_VERSION );
+	if (($nirvana_frontpage=="Enable") && is_front_page() && 'posts' == get_option( 'show_on_front' )) {  
+		wp_enqueue_style( 'nirvana-frontpage', get_template_directory_uri() . '/styles/style-frontpage.css', NULL, _CRYOUT_THEME_VERSION ); 
 	}
 }
 add_action('wp_head', 'nirvana_enqueue_frontpage', 19 );
@@ -77,7 +76,7 @@ add_action('wp_head', 'nirvana_enqueue_frontpage', 19 );
 function nirvana_load_mobile_css() {
 	global $nirvanas;
 	foreach ($nirvanas as $key => $value) {${"$key"} = $value ;}
-	if ($nirvana_mobile=="Enable") {
+	if ($nirvana_mobile=="Enable") { 
 		wp_enqueue_style( 'nirvana-mobile', get_template_directory_uri() . '/styles/style-mobile.css', NULL, _CRYOUT_THEME_VERSION );
 	}
 }
@@ -96,11 +95,11 @@ function nirvana_scripts_method() {
 
 	wp_enqueue_script('cryout-frontend',get_template_directory_uri() . '/js/frontend.js', array('jquery'), _CRYOUT_THEME_VERSION, true );
 
-	if ($nirvana_frontpage == "Enable" && is_front_page()) {
+	if ($nirvana_frontpage == "Enable" && is_front_page()) { 
 			// if PP and the current page is frontpage - load the nivo slider js
 			wp_enqueue_script('cryout-nivoSlider',get_template_directory_uri() . '/js/nivo.slider.min.js', array('jquery'), _CRYOUT_THEME_VERSION, true);
 			// add slider init js in footer
-			add_action('wp_footer', 'nirvana_pp_slider' );
+			add_action('wp_footer', 'nirvana_pp_slider' ); 
 	}
 
 	// We add some JavaScript to pages with the comment form to support sites with threaded comments (when in use)

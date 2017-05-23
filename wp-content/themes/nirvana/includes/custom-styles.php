@@ -9,19 +9,19 @@ function nirvana_body_classes($classes) {
 	$magazine_layout = FALSE;
 	if ($nirvanas['nirvana_magazinelayout'] == "Enable") {
 		if (is_front_page()) {
-			if ( ($nirvanas['nirvana_frontpage'] == "Enable") && (intval($nirvanas['nirvana_frontpostsperrow']) == 1) ) { /* no magazine layout */ }
+			if ( ($nirvanas['nirvana_frontpage'] == "Enable") && (intval($nirvanas['nirvana_frontpostsperrow']) == 1) ) { /* no magazine layout */ } 
 																											 else { $magazine_layout = TRUE; }
 		} else {
 			$magazine_layout = TRUE;
 		}
 	}
 	if ( is_front_page() && ($nirvanas['nirvana_frontpage'] == "Enable") && (intval($nirvanas['nirvana_frontpostsperrow']) == 2) ) { $magazine_layout = TRUE; }
-
+	
 	if ($magazine_layout) $classes[] = 'magazine-layout';
-
+	
 	if (is_front_page() && $nirvanas['nirvana_frontpage'] == "Enable" && (get_option('show_on_front') == 'posts') ) {
 		$classes[] = 'presentation-page';
-		$classes[] = 'coldisplay'.$nirvanas['nirvana_coldisplay'];
+		$classes[] = 'coldisplay'.$nirvanas['nirvana_coldisplay']; 
 	}
 	if ($nirvanas['nirvana_duality'] == 'Boxed') $classes[] = 'nirvana-boxed';
 	switch ($nirvanas['nirvana_menualign']):
@@ -30,14 +30,14 @@ function nirvana_body_classes($classes) {
 		case "rightmulti":	$classes[] = 'nirvana-menu-rightmulti'; break;
 		default: 			$classes[] = 'nirvana-menu-left'; break;
 	  endswitch;
-
-	switch ($nirvanas['nirvana_topbar']):
-		case "Fixed":       $classes[] = 'nirvana-topbarfixed'; break;
-		case "Hide":        $classes[] = 'nirvana-topbarhide'; break;
-		case "Normal": default: break;
- 	endswitch;
-    if ($nirvanas['nirvana_topbarwidth'] == 'Full width') $classes[] = 'nirvana-topbarfull';
-
+	  
+	switch ($nirvanas['nirvana_topbar']): 
+		case "Fixed":       $classes[] = 'nirvana-topbarfixed'; break; 
+		case "Hide":        $classes[] = 'nirvana-topbarhide'; break; 
+		case "Normal": default: break; 
+ 	endswitch; 
+    if ($nirvanas['nirvana_topbarwidth'] == 'Full width') $classes[] = 'nirvana-topbarfull'; 
+	  
 	return $classes;
 }
 add_filter('body_class','nirvana_body_classes');
@@ -65,9 +65,9 @@ function nirvana_custom_styles() {
 /* BOXED LAYOUT */
 if ($nirvana_duality == 'Boxed') { ?>
 #header-full, #breadcrumbs, #main { max-width: <?php echo esc_html($totalwidth); ?>px; margin:0 auto; }
-#access > .menu > ul { margin-left:0; }
+#access > .menu > ul { margin-left:0; } 
 #pp-texttop, #pp-textmiddle, #pp-textbottom, #front-columns h2, .presentation-page #content {
-		padding-left:20px !important; padding-right: 20px !important; }
+		padding-left:20px !important; padding-right: 20px !important; } 
 <?php };
 
 /* RESPONSIVENESS DISABLED */
@@ -183,7 +183,7 @@ background-color:<?php echo esc_html(cryout_hexadder($nirvana_submenucolorbgdefa
 
 #topbar { background-color:  <?php echo esc_html($nirvana_topbarcolorbg); ?>;
 		  border-bottom-color:<?php echo esc_html(cryout_hexadder($nirvana_topbarcolorbg,'-20'));?>; }
-
+		  
 .menu-header-search .searchform {background: <?php echo esc_html($nirvana_accentcolore); ?>;}
 .topmenu ul li a, .search-icon:before { color: <?php echo esc_html($nirvana_topmenucolortxt); ?>; }
 .topmenu ul li a:hover { color: <?php echo esc_html($nirvana_topmenucolortxthover); ?>; background-color: <?php echo esc_html($nirvana_accentcolora); ?>; }
@@ -235,14 +235,14 @@ a.continue-reading-link:hover i.icon-right-dir {color:<?php echo esc_html($nirva
 .file, .button, #respond .form-submit input#submit, input[type="submit"], input[type="reset"] {
 	background-color: <?php echo esc_html($nirvana_contentcolorbg); ?>;
 	border-color: <?php echo esc_html($nirvana_accentcolord); ?>; }
-.button:hover, #respond .form-submit input#submit:hover {
+.file:hover, .button:hover, #respond .form-submit input#submit:hover {
 	background-color: <?php echo esc_html($nirvana_accentcolore); ?>; }
 .entry-content tr th, .entry-content thead th {
 	color: <?php echo esc_html($nirvana_contentcolortxtheadings); ?>; }
  #content tr th { background-color: <?php echo esc_html($nirvana_accentcolora); ?>;color:<?php echo esc_html($nirvana_contentcolorbg);?>; }
  #content tr.even { background-color: <?php echo esc_html($nirvana_accentcolore); ?>; }
 hr { background-color: <?php echo esc_html($nirvana_accentcolord); ?>; }
-input[type="text"], input[type="password"], input[type="email"], textarea, select,
+input[type="text"], input[type="password"], input[type="email"], input[type="file"], textarea, select,
 input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="number"],input[type="range"],
 input[type="search"],input[type="tel"],input[type="time"],input[type="url"],input[type="week"] {
 	/*background-color: <?php echo esc_html($nirvana_accentcolore); ?>;*/
@@ -380,7 +380,7 @@ foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
 }
 .nivo-caption h2 {font-size:<?php echo esc_html($nirvana_fpslidertitlesize); ?>;<?php if($nirvana_fpslider_titlecaps) { ?> text-transform: uppercase; <?php }?>  }
 .slide-text {font-size:<?php echo esc_html($nirvana_fpslidertextsize); ?>; <?php if($nirvana_fpslider_textcaps) { ?> text-transform: uppercase; <?php }?><?php if($nirvana_fpslider_centertext) { ?> text-align: center !important; <?php }?>  }
-#frontpage .theme-default .nivoSlider .readmore a { font-size:<?php echo esc_html( round( intval($nirvana_fpslidertextsize) * 0.8, 0) ); ?>px; }
+#frontpage .theme-default .nivoSlider .readmore a { font-size:<?php echo esc_html( round( intval($nirvana_fpslidertextsize) * 0.8, 0) ); ?>px; } 
 #pp-texttop {background: <?php echo esc_html($nirvana_fronttextbgcolortop); ?>;}
 #front-columns-box {background: <?php echo esc_html($nirvana_frontcolumnsbgcolor); ?>;}
 #pp-textmiddle {background: <?php echo esc_html($nirvana_fronttextbgcolormiddle); ?>;}
@@ -391,8 +391,8 @@ foreach ($nirvanas as $key => $value) { ${"$key"} = $value; }
 <?php if ($nirvana_fpslider_bordersize): ?> border:<?php echo esc_html($nirvana_fpslider_bordersize) ;?>px solid <?php echo esc_html($nirvana_fpsliderbordercolor); ?>; <?php endif; ?> }
 .theme-default .nivo-controlNav {bottom:<?php echo esc_html($nirvana_fpslider_bordersize+20); ?>px;}
 
-#front-text1 h2, #front-text2 h2, #front-text5 h2, #front-columns h2 {
-	color: <?php echo esc_html($nirvana_fronttitlecolor); ?>;
+#front-text1 h2, #front-text2 h2, #front-text5 h2, #front-columns h2 { 
+	color: <?php echo esc_html($nirvana_fronttitlecolor); ?>; 
 	font-size: <?php echo round(34.6*(preg_replace("/[^\d]/","",$nirvana_headingsfontsize)/100),0) ?>px;
     line-height: <?php echo round(42*(preg_replace("/[^\d]/","",$nirvana_headingsfontsize)/100),0) ?>px; }
 
@@ -454,10 +454,14 @@ echo "#front-columns > div:nth-child(11n+7) {transform:rotate(". rand(2,5)."deg)
 #front-columns > div {
 	border: 8px solid #fff;
 	padding: 0;
+	-webkit-box-shadow: 0 0 2px #ccc;
+	-moz-box-shadow: 0 0 2px #ccc;
 	box-shadow: 0 0 2px #ccc;
-	-webkit-backface-visibility: hidden;
 	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
+	-webkit-backface-visibility: hidden;
 }
 #front-columns > div:hover {
 	z-index: 252;
